@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <table border="0" width="100%" align="top" style="position:relative; height:80px; background-color: chartreuse">
+            <tr>
+                <td align="center">
+                    <p>3SE1</p>
+                </td>
+            </tr>
+        </table>
+        <table border="1" width="100%" align="top" style="height:421px; background-color: chartreuse">
+            <td style="font-size: larger;" align="center">
+                <ui:include src="/jsfTutorial/sidebar.xhtml"/>
+            </td>
+            <td width="85%" valign="top" bgcolor="white" height="260px">
+                <br/><br/><br/><br/>
+                <ui:insert name="body"/>Area yang bisa diedit
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <ui:insert name="extended"/>Area yang bisa diedit juga
+            </td>
+        </table>
+        <table border="0" width="100%" align="top" style="height:40px; background-color: chartreuse">
+            <tr>
+                <td align="center">
+                    <h3>3SE1.ccit.eng.id</h3>
+                </td>
+            </tr>
+        </table>
+        
+    </h:body>
+</html>
+

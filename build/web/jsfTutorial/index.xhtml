@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>JSF Page</title>
+        <script type="text/javascript">
+            function inputEmail()
+            {
+                alert(document.getElementById("myForm:email").value);
+            }
+            function inputPass()
+            {
+                alert(document.getElementById("myForm:password").value);
+            }
+            function inputHidden()
+            {
+                alert(document.getElementById("myForm:hidden").value);
+            }
+            function inputComment()
+            {
+                alert(document.getElementById("myForm:inputArea").value);
+            }
+            </script>
+    </h:head>
+    <h:body>
+        <h2 align="center">Alert Get Value </h2>
+        <hr/>
+        <h:form id="myForm">
+            <h:inputText a:placeholder ="Email" id="email"/>&nbsp;
+            <h:inputSecret a:placeholder ="Password" id="password" maxlength="8"/><br/><br/>
+            <h:inputHidden value="Hello World" id="hidden"/>
+            <h:inputTextarea rows="5" a:placeholder="comment" id="inputArea"/><br/>
+            <h:commandButton value="Get value Email" onclick="inputEmail()"/>&nbsp;
+            <h:commandButton value="Get value Password" onclick="inputPass()"/>&nbsp;
+            <h:commandButton value="Get value Hidden" onclick="inputHidden()"/>&nbsp;
+            <h:commandButton value="Get value Comment" onclick="inputComment()"/>&nbsp;<br/><br/>
+            
+            <h:commandButton value="Next Page" action="/jsfTutorial/nextPage.xhtml"/>
+            <h:commandButton value="Sidebar Page" action="/jsfTutorial/sidebar.xhtml"/>
+            <h:commandButton value="Compotition Page" action="/jsfTutorial/template_compotition.xhtml"/>
+            <h:commandButton value="Include Page" action="/jsfTutorial/template_include.xhtml"/>
+            <h:commandButton value="Insert Page" action="/jsfTutorial/template_insert.xhtml"/>
+            <h:commandButton value="Define Page" action="/jsfTutorial/template_define.xhtml"/>
+            <h:commandButton value="Decorate Page" action="/jsfTutorial/template_decorate.xhtml"/>
+        </h:form>
+    </h:body>
+</html>
